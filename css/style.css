@@ -1,0 +1,21 @@
+.my-bg-color-yel{
+    background-color: yellow;
+}
+
+.my-bg-color-tom{
+    background-color: tomato;
+}
+
+.my-big{
+    width: 70%;
+    height: 500px;
+}
+
+.my-small{
+    width: 30%;
+    height: 500px;
+} 
+
+.size{
+    height: calc(100% / 5);
+}
