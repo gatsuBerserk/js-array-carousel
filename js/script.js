@@ -1,10 +1,10 @@
 // Array con immagini
 const images = [
     'img/01.jpg',
-    'img/02.jpg',
-    'img/03.jpg',
-    'img/04.jpg',
-    'img/05.jpg',
+    // 'img/02.jpg',
+    // 'img/03.jpg',
+    // 'img/04.jpg',
+    // 'img/05.jpg',
 ]; 
 
 console.log(images)
@@ -16,7 +16,7 @@ carouselLeft ="";
     for (let i = 0 ; i < images.length ; i++){ 
         carouselLeft += `
         <div class="my-size-left border-bottom">
-        <img src="${images[i]}" class="my-img-left" alt="Random picture">
+        <img src="${images[i]}" class="my-img" alt="Random picture">
         </div>`
     }; 
     const carouselWrapper = document.querySelector('div.multi-img');
@@ -25,3 +25,14 @@ carouselLeft ="";
 
 
 // Quando ne selezioniamo 1 deve apparire nel riquadro centrale. (Proviamo con la prima)
+let carouselCentralContent = '';
+
+for (let i = 0 ; i < images.length ; i++){
+   carouselCentralContent += 
+	`<div class="my-img">
+        <img class="my-size-img-central" src="img/01.jpg" alt="">
+    </div>`
+}; 
+ 
+const centralWrapper= document.querySelector("div.central-img"); 
+centralWrapper.innerHTML+=carouselCentralContent;
