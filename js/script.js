@@ -9,10 +9,19 @@ const images = [
 
 console.log(images)
 
+carouselLeft ="";
 // Abbiamo lateralmente a sinistra 5 Img. (Proviamo con una)
-    // 1) Inseriamo l'immagine nel riquadro sinistro
-
-
+    // 1) Inseriamo l'immagine nel riquadro sinistro 
+    
+    for (let i = 0 ; i < images.length ; i++){ 
+        carouselLeft += `
+        <div class="my-size-left border-bottom">
+        <img src="${images[i]}" class="my-img-left" alt="Random picture">
+        </div>`
+    }; 
+    const carouselWrapper = document.querySelector('div.multi-img');
+    carouselWrapper.innerHTML += carouselLeft;
+// § fine aggiunta -->
 
 
 // Quando ne selezioniamo 1 deve apparire nel riquadro centrale. (Proviamo con la prima)
