@@ -16,6 +16,12 @@
     height: 500px;
 } 
 
-.size{
+.my-size-left{
     height: calc(100% / 5);
+} 
+
+.my-size-img-central{ 
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
 }
