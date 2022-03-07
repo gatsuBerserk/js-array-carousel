@@ -8,20 +8,44 @@
 
 .my-big{
     width: 70%;
-    height: 500px;
+    height: 800px;
 }
 
 .my-small{
     width: 30%;
-    height: 500px;
+    height: 800px;
 } 
 
 .my-size-left{
-    height: calc(100% / 5);
+    height: calc(100% / 5);     
+}
+.my-img-left{
+    width: 100%;
+    height: 100%;
 } 
+
 
 .my-size-img-central{ 
     height: 100%;
     width: 100%;
-    object-fit: cover;
+    object-fit: cover; 
+    display: none;     
+} 
+.my-text{
+    text-align: right;
+    color: white;
+} 
+
+.my-img{
+    height: 100%;
+    width: 100%; 
+    
+
+} 
+.my-btn{
+    z-index: 3;
+} 
+
+.active{ 
+    display: block;
 }
