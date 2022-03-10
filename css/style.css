@@ -21,9 +21,8 @@
 }
 .my-img-left{
     width: 100%;
-    height: 100%;
+    height: 100%;    
 } 
-
 
 .my-size-img-central{ 
     height: 100%;
@@ -31,9 +30,12 @@
     object-fit: cover; 
     display: none;     
 } 
-.my-text{
-    text-align: right;
-    color: white;
+.description{
+    display: none;
+    width: 100%; 
+    text-align: end; 
+    right: 1.5rem;
+    bottom: 3rem; 
 } 
 
 .my-img{

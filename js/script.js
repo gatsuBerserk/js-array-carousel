@@ -36,13 +36,17 @@ for(let i = 0; i < images.length; i++ ){
     coverImg += 
     ` 
 
-        <img class="my-size-img-central" src="${images[i]}" alt="">         
+        <img class="my-size-img-central" src="${images[i]}" alt=""> 
+        <div class=" description text-white position-absolute "> 
+        <p class="fs-3"> ${title [i]}</p>
+        <p class="fs-5"> ${text [i]}</p>
+        </div>
         
     `
     imgPrew +=
     ` 
     <div class="my-size-left">
-        <img class="my-img-left img-fluid" src="${images[i]}" alt="">
+        <img class="my-img-left img-fluid" src="${images[i]}" alt=""> 
     </div> 
     `
 
@@ -54,7 +58,8 @@ leftImg.innerHTML= imgPrew;
 
 let activeElement= 0;
 document.getElementsByClassName("my-size-img-central")[activeElement].classList.add("active"); 
-document.getElementsByClassName("my-img-left")[activeElement].classList.add("active");
+document.getElementsByClassName("my-img-left")[activeElement].classList.add("active"); 
+document.getElementsByClassName("description")[activeElement].classList.add("active");
 
 
 // arrow
@@ -62,7 +67,10 @@ const up = document.querySelector("div.arrow-up");
 
 up.addEventListener("click", function() {
     
-    document.getElementsByClassName("my-size-img-central")[activeElement].classList.remove("active"); 
+    document.getElementsByClassName("my-size-img-central")[activeElement].classList.remove("active");
+    document.getElementsByClassName("description")[activeElement].classList.remove("active");
+    
+ 
     
     if(activeElement === 0){
         activeElement= images.length -1; 
@@ -72,6 +80,7 @@ up.addEventListener("click", function() {
 
     
     document.getElementsByClassName("my-size-img-central")[activeElement].classList.add("active");
+    document.getElementsByClassName("description")[activeElement].classList.add("active");
     
     
 }); 
@@ -79,6 +88,7 @@ up.addEventListener("click", function() {
 const down= document.querySelector("div.arrow-down");
 down.addEventListener("click", function() {
     document.getElementsByClassName("my-size-img-central")[activeElement].classList.remove("active");
+    document.getElementsByClassName("description")[activeElement].classList.remove("active");
    
 
     if( activeElement === images.length -1){
@@ -88,6 +98,7 @@ down.addEventListener("click", function() {
     }
     
     document.getElementsByClassName("my-size-img-central")[activeElement].classList.add("active");
+    document.getElementsByClassName("description")[activeElement].classList.add("active");
     
 });  
 
